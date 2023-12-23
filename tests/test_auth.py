@@ -2,7 +2,8 @@ import random
 import requests
 
 
-HOST = "localhost:5000"
+# HOST = "localhost:5000"
+HOST = "api.baiwow.com"
 
 
 # 1. 注册
@@ -10,7 +11,7 @@ def test_SignUp():
     # post 请求
     url = "http://{}/sign_up".format(HOST)
     i = random.randint(0, 10)
-    i = 99
+    i = 98
     req = {
         "email": "{}_test@qq.com".format(i),
         "password": "{}_password".format(i),
@@ -64,8 +65,8 @@ def test_ChangePassword():
 
 
 if __name__ == '__main__':
-    # test_SignUp()
+    test_SignUp()
     # test_Login()
     # test_SendVerifyCode()
     # test_ConfirmVerifyCode()
-    test_ChangePassword()
+    # test_ChangePassword()
